@@ -65,5 +65,11 @@ export const filter = (arr, callback) => {
  */
 export const reduce = (arr, callback, initialValue) => {
   // TODO: implement here
+  let final = 0
+  for(let i=0 ;i<arr.length ;i++){
+    const result = callback(initialValue,arr[i],i)
+    final += result
+  }
+  return final
 
 }
